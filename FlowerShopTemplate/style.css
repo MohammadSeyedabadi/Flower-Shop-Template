@@ -126,11 +126,17 @@ body {
   text-decoration: none;
   color: #0c5b47;
 }
+@media only screen and (min-width: 992px) {
+  .ScrollToTopBtn
+  {
+    display:none;
+  }
+}
 #myBtn {
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  right: 10px;
   z-index: 99;
   font-size: 18px;
   border: none;
