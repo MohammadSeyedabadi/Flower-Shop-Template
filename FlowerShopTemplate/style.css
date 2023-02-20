@@ -144,7 +144,6 @@ body {
   color: rgb(255, 149, 167);
   cursor: pointer;
   padding: 5px;
-  border-radius: 4px;
 }
 
 #myBtn:hover {
