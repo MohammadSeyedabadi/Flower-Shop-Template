@@ -127,9 +127,8 @@ body {
   color: #0c5b47;
 }
 @media only screen and (min-width: 992px) {
-  .ScrollToTopBtn
-  {
-    display:none;
+  .ScrollToTopBtn {
+    display: none;
   }
 }
 #myBtn {
