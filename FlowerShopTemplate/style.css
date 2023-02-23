@@ -1,0 +1,151 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    color: #0c5b47;
+    background-color: #fffbf6;
+  }
+  .CustomNavBar {
+    background-color: #ecb0b0;
+  }
+  .CssFontSize {
+    font-size: larger;
+  }
+  .FontStyle1NavBrand {
+    font-size: large;
+    font-weight: 400;
+  }
+  .FontStyle1NavItem {
+    font-size: medium;
+    font-style: italic;
+    font-weight: 400;
+    color: white !important;
+  }
+  .FontStyle1 {
+    font-size: medium;
+    font-style: italic;
+    font-weight: 400;
+  }
+  
+  .SmallTitle {
+    font-size: medium;
+    font-style: italic;
+    color: #0c5b47 !important;
+  }
+  .BigTitle {
+    font-size: larger;
+  }
+  .button {
+    background-color: #d8e3d5;
+    color: #10634e;
+    border-radius: 0;
+    border: none;
+  }
+  .button:hover {
+    background-color: #cddbc9;
+  }
+  .progress-bar {
+    background-color: rgb(202, 224, 196);
+  }
+  .progressCap {
+    font-weight: 400;
+  }
+  .CssbgColor1 {
+    background-color: #ffffff;
+  }
+  .CssbgColor2 {
+    background-color: #f5dddd;
+  }
+  .CssbgColor3 {
+    background-color: #d8e3d5;
+  }
+  .CssbgColor4 {
+    background-color: #fffbf6;
+  }
+  .CssbgColor5 {
+    background-color: #fef1e6;
+  }
+  .CssbgColor6 {
+    background-color: #f2f2f2;
+  }
+  .LinkUnderLine {
+    text-decoration: none;
+  }
+  .LinkUnderLine:hover {
+    text-decoration: underline;
+  }
+  .JumbotronBgColor {
+    background-color: #e0ecdc;
+  }
+  .quoteTransform {
+    transform: rotateZ(180deg);
+  }
+  .CityName {
+    font-size: x-large;
+  }
+  
+  .ContactsBoxsTitle {
+    font-size: large;
+  }
+  .ContactsBoxsContent {
+    font-size: medium;
+    font-style: italic;
+    font-weight: 500;
+  }
+  .LocalFlorist {
+    font-weight: 400;
+    font-size: xx-large;
+  }
+  .SendB {
+    font-weight: 400;
+    color: #10634e !important;
+    background-color: #fef1e6 !important;
+    border-color: #fef1e6 !important;
+  }
+  .SendB:hover {
+    color: #10634e !important;
+    background-color: #f8e7dc !important;
+    border-color: #f8e7dc !important;
+  }
+  .SubscribeInput:focus {
+    background-color: #e0ecdc;
+  }
+  .SubscribeTitle {
+    font-weight: 400;
+  }
+  .SubscribeBtn {
+    background-color: #d8e3d5;
+    color: #10634e;
+  }
+  .SubscribeBtn:hover {
+    background-color: #cddbc9;
+    color: #10634e;
+  }
+  .ContacLink {
+    text-decoration: none;
+    color: #0c5b47;
+  }
+  @media only screen and (min-width: 992px) {
+    .ScrollToTopBtn {
+      display: none;
+    }
+  }
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgb(250, 207, 207);
+    color: rgb(255, 149, 167);
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  #myBtn:hover {
+    background-color: rgb(253, 237, 237);
+  }
