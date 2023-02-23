@@ -1,312 +1,316 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: #0c5b47;
-    background-color: #fffbf6;
-  }
+  scroll-behavior: smooth;
+}
 
-  :root {
-    --navbar-bg-color: #ecb0b0;
-    --navbar-text-color: #f5f4f4;
-    --navbar-text-color-focus: white;
-    --navbar-bg-contrast: #fc74a4;
-  }
-  .containercss {
-    padding-left: 1.4rem;
-    padding-right: 1.4rem;
-  }
-  #navbar {
-    z-index: 99;
-    --navbar-height: 54px;
-    position: fixed;
-    height: var(--navbar-height);
-    background-color: var(--navbar-bg-color);
-    left: 0;
-    right: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  }
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    align-items: center;
-  }
-  .navbar-item {
-    margin: 0.4em;
-    width: 100%;
-  }
-  
-  .home-link,
-  .navbar-link {
-    color: var(--navbar-text-color);
-    text-decoration: none;
-    white-space: nowrap;
-    display: flex;
-    font-weight: 400;
-    font-size: medium;
-    align-items: center;
-  }
-  .navsvg {
-    margin-right: 0.4rem;
-  }
-  .home-link:is(:focus, :hover) {
-    color: var(--navbar-text-color-focus);
-  }
-  
-  .navbar-link {
-    justify-content: flex-start;
-    width: 100%;
-    padding: 0.4em 0.8em;
-    border-radius: 5px;
-  }
-  
-  .navbar-link:is(:focus, :hover) {
-    color: var(--navbar-text-color-focus);
-    background-color: var(--navbar-bg-contrast);
-  }
-  #navbar-toggle {
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .icon-bar {
-    display: block;
-    width: 25px;
-    height: 4px;
-    margin: 2px;
-    background-color: var(--navbar-text-color);
-  }
-  
-  #navbar-toggle:is(:focus, :hover) .icon-bar {
-    background-color: var(--navbar-text-color-focus);
-  }
-  #navbar-toggle[aria-expanded='true'] .icon-bar:is(:first-child, :last-child) {
-    position: absolute;
-    margin: 0;
-    width: 30px;
-  }
-  #navbar-toggle[aria-expanded='true'] .icon-bar:first-child {
-    transform: rotate(45deg);
-  }
-  #navbar-toggle[aria-expanded='true'] .icon-bar:nth-child(2) {
-    opacity: 0;
-  }
-  #navbar-toggle[aria-expanded='true'] .icon-bar:last-child {
-    transform: rotate(-45deg);
-  }
-  
-  #navbar-menu {
-    position: fixed;
-    top: var(--navbar-height);
-    bottom: 0;
-    opacity: 0;
-    visibility: hidden;
-    left: 0;
-    right: 0;
-  }
-  #navbar-toggle[aria-expanded='true'] + #navbar-menu {
-    background-color: rgba(0, 0, 0, 0.4);
-    opacity: 1;
-    visibility: visible;
-  }
-  .navbar-links {
-    list-style: none;
-    position: absolute;
-    background-color: var(--navbar-bg-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    left: 0;
-    right: 0;
-    margin: 1.4rem;
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  }
-  
-  #navbar-toggle[aria-expanded='true'] + #navbar-menu .navbar-links {
-    padding: 1em;
-  }
-  @media screen and (min-width: 1120px) {
-    #navbar-toggle,
-    #navbar-toggle[aria-expanded='true'] {
-      display: none;
-    }
-    #navbar-menu,
-    #navbar-toggle[aria-expanded='true'] #navbar-menu {
-      visibility: visible;
-      opacity: 1;
-      position: static;
-      display: block;
-      height: 100%;
-    }
-    .navbar-links,
-    #navbar-toggle[aria-expanded='true'] #navbar-menu .navbar-links {
-      margin: 0;
-      padding: 0;
-      box-shadow: none;
-      position: static;
-      flex-direction: row;
-      width: 100%;
-      height: 100%;
-    }
-  }
+body {
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #0c5b47;
+  background-color: #fffbf6;
+}
 
-  .CustomNavBar {
-    background-color: #ecb0b0;
-  }
-  .CssFontSize {
-    font-size: larger;
-  }
-  .FontStyle1NavBrand {
-    font-size: large;
-    font-weight: 400;
-  }
-  .FontStyle1NavItem {
-    font-size: medium;
-    font-style: italic;
-    font-weight: 400;
-    color: white !important;
-  }
-  .FontStyle1 {
-    font-size: medium;
-    font-style: italic;
-    font-weight: 400;
-  }
-  
-  .SmallTitle {
-    font-size: medium;
-    font-style: italic;
-    color: #0c5b47 !important;
-  }
-  .BigTitle {
-    font-size: larger;
-  }
-  .button {
-    background-color: #d8e3d5;
-    color: #10634e;
-    border-radius: 0;
-    border: none;
-  }
-  .button:hover {
-    background-color: #cddbc9;
-  }
-  .progress-bar {
-    background-color: rgb(202, 224, 196);
-  }
-  .progressCap {
-    font-weight: 400;
-  }
-  .CssbgColor1 {
-    background-color: #ffffff;
-  }
-  .CssbgColor2 {
-    background-color: #f5dddd;
-  }
-  .CssbgColor3 {
-    background-color: #d8e3d5;
-  }
-  .CssbgColor4 {
-    background-color: #fffbf6;
-  }
-  .CssbgColor5 {
-    background-color: #fef1e6;
-  }
-  .CssbgColor6 {
-    background-color: #f2f2f2;
-  }
-  .LinkUnderLine {
-    text-decoration: none;
-  }
-  .LinkUnderLine:hover {
-    text-decoration: underline;
-  }
-  .JumbotronBgColor {
-    background-color: #e0ecdc;
-  }
-  .quoteTransform {
-    transform: rotateZ(180deg);
-  }
-  .CityName {
-    font-size: x-large;
-  }
-  
-  .ContactsBoxsTitle {
-    font-size: large;
-  }
-  .ContactsBoxsContent {
-    font-size: medium;
-    font-style: italic;
-    font-weight: 500;
-  }
-  .LocalFlorist {
-    font-weight: 400;
-    font-size: xx-large;
-  }
-  .SendB {
-    font-weight: 400;
-    color: #10634e !important;
-    background-color: #fef1e6 !important;
-    border-color: #fef1e6 !important;
-  }
-  .SendB:hover {
-    color: #10634e !important;
-    background-color: #f8e7dc !important;
-    border-color: #f8e7dc !important;
-  }
-  .SubscribeInput:focus {
-    background-color: #e0ecdc;
-  }
-  .SubscribeTitle {
-    font-weight: 400;
-  }
-  .SubscribeBtn {
-    background-color: #d8e3d5;
-    color: #10634e;
-  }
-  .SubscribeBtn:hover {
-    background-color: #cddbc9;
-    color: #10634e;
-  }
-  .ContacLink {
-    text-decoration: none;
-    color: #0c5b47;
-  }
-  @media only screen and (min-width: 992px) {
-    .ScrollToTopBtn {
-      display: none;
-    }
-  }
-  #myBtn {
+:root {
+  --navbar-bg-color: #ecb0b0;
+  --navbar-text-color: #f5f4f4;
+  --navbar-text-color-focus: white;
+  --navbar-bg-contrast: #fc74a4;
+  --navbar-height: 54px;
+}
+.containercss {
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+}
+#navbar {
+  z-index: 99;
+  position: fixed;
+  height: var(--navbar-height);
+  background-color: var(--navbar-bg-color);
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+.navbar-item {
+  margin: 0.4em;
+  width: 100%;
+}
+
+.home-link,
+.navbar-link {
+  color: var(--navbar-text-color);
+  text-decoration: none;
+  white-space: nowrap;
+  display: flex;
+  font-weight: 400;
+  font-size: medium;
+  align-items: center;
+}
+.navsvg {
+  margin-right: 0.4rem;
+}
+.home-link:is(:focus, :hover) {
+  color: var(--navbar-text-color-focus);
+}
+
+.navbar-link {
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+}
+
+.navbar-link:is(:focus, :hover) {
+  color: var(--navbar-text-color-focus);
+  background-color: var(--navbar-bg-contrast);
+}
+#navbar-toggle {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.icon-bar {
+  display: block;
+  width: 25px;
+  height: 4px;
+  margin: 2px;
+  background-color: var(--navbar-text-color);
+}
+
+#navbar-toggle:is(:focus, :hover) .icon-bar {
+  background-color: var(--navbar-text-color-focus);
+}
+#navbar-toggle[aria-expanded='true'] .icon-bar:is(:first-child, :last-child) {
+  position: absolute;
+  margin: 0;
+  width: 30px;
+}
+#navbar-toggle[aria-expanded='true'] .icon-bar:first-child {
+  transform: rotate(45deg);
+}
+#navbar-toggle[aria-expanded='true'] .icon-bar:nth-child(2) {
+  opacity: 0;
+}
+#navbar-toggle[aria-expanded='true'] .icon-bar:last-child {
+  transform: rotate(-45deg);
+}
+
+#navbar-menu {
+  position: fixed;
+  top: var(--navbar-height);
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  left: 0;
+  right: 0;
+}
+#navbar-toggle[aria-expanded='true'] + #navbar-menu {
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  visibility: visible;
+}
+.navbar-links {
+  list-style: none;
+  position: absolute;
+  background-color: var(--navbar-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0;
+  right: 0;
+  margin: 1.4rem;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#navbar-toggle[aria-expanded='true'] + #navbar-menu .navbar-links {
+  padding: 1em;
+}
+@media screen and (min-width: 1120px) {
+  #navbar-toggle,
+  #navbar-toggle[aria-expanded='true'] {
     display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 10px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: rgb(250, 207, 207);
-    color: rgb(255, 149, 167);
-    cursor: pointer;
-    padding: 5px;
   }
-  
-  #myBtn:hover {
-    background-color: rgb(253, 237, 237);
+  #navbar-menu,
+  #navbar-toggle[aria-expanded='true'] #navbar-menu {
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    display: block;
+    height: 100%;
   }
+  .navbar-links,
+  #navbar-toggle[aria-expanded='true'] #navbar-menu .navbar-links {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    position: static;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.FixOverlap {
+  height: var(--navbar-height);
+}
+
+.CustomNavBar {
+  background-color: #ecb0b0;
+}
+.CssFontSize {
+  font-size: larger;
+}
+.FontStyle1NavBrand {
+  font-size: large;
+  font-weight: 400;
+}
+.FontStyle1NavItem {
+  font-size: medium;
+  font-style: italic;
+  font-weight: 400;
+  color: white !important;
+}
+.FontStyle1 {
+  font-size: medium;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.SmallTitle {
+  font-size: medium;
+  font-style: italic;
+  color: #0c5b47 !important;
+}
+.BigTitle {
+  font-size: larger;
+}
+.button {
+  background-color: #d8e3d5;
+  color: #10634e;
+  border-radius: 0;
+  border: none;
+}
+.button:hover {
+  background-color: #cddbc9;
+}
+.progress-bar {
+  background-color: rgb(202, 224, 196);
+}
+.progressCap {
+  font-weight: 400;
+}
+.CssbgColor1 {
+  background-color: #ffffff;
+}
+.CssbgColor2 {
+  background-color: #f5dddd;
+}
+.CssbgColor3 {
+  background-color: #d8e3d5;
+}
+.CssbgColor4 {
+  background-color: #fffbf6;
+}
+.CssbgColor5 {
+  background-color: #fef1e6;
+}
+.CssbgColor6 {
+  background-color: #f2f2f2;
+}
+.LinkUnderLine {
+  text-decoration: none;
+}
+.LinkUnderLine:hover {
+  text-decoration: underline;
+}
+.JumbotronBgColor {
+  background-color: #e0ecdc;
+}
+.quoteTransform {
+  transform: rotateZ(180deg);
+}
+.CityName {
+  font-size: x-large;
+}
+
+.ContactsBoxsTitle {
+  font-size: large;
+}
+.ContactsBoxsContent {
+  font-size: medium;
+  font-style: italic;
+  font-weight: 500;
+}
+.LocalFlorist {
+  font-weight: 400;
+  font-size: xx-large;
+}
+.SendB {
+  font-weight: 400;
+  color: #10634e !important;
+  background-color: #fef1e6 !important;
+  border-color: #fef1e6 !important;
+}
+.SendB:hover {
+  color: #10634e !important;
+  background-color: #f8e7dc !important;
+  border-color: #f8e7dc !important;
+}
+.SubscribeInput:focus {
+  background-color: #e0ecdc;
+}
+.SubscribeTitle {
+  font-weight: 400;
+}
+.SubscribeBtn {
+  background-color: #d8e3d5;
+  color: #10634e;
+}
+.SubscribeBtn:hover {
+  background-color: #cddbc9;
+  color: #10634e;
+}
+.ContacLink {
+  text-decoration: none;
+  color: #0c5b47;
+}
+@media only screen and (min-width: 992px) {
+  .ScrollToTopBtn {
+    display: none;
+  }
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(250, 207, 207);
+  color: rgb(255, 149, 167);
+  cursor: pointer;
+  padding: 5px;
+}
+
+#myBtn:hover {
+  background-color: rgb(253, 237, 237);
+}
