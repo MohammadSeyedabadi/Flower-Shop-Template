@@ -36,28 +36,24 @@
       </button>
     </section>
 
-    <section>
-      <header id="navbar-css">
-        <nav class="navbar-container-css container-css">
-          <a href="/" class="home-link-css">
-            <div class="navbar-logo-css"></div>
-            <em>Special prices for orders over $150</em>
-          </a>
-          <button
-            type="button"
-            id="navbar-toggle-css"
-            aria-controls="navbar-menu-css"
-            aria-label="Toggle menu-css"
-            aria-expanded="false"
+    <section class="sticky-top">
+      <nav class="col-12 navbar navbar-expand-lg navbar-dark mb-5 CustomNavBar">
+        <div class="container-fluid">
+          <span class="navbar-brand me-lg-5 FontStyle1NavBrand" href="#"
+            ><em>Special prices for orders over $150</em></span
           >
-            <span class="icon-bar-css"></span>
-            <span class="icon-bar-css"></span>
-            <span class="icon-bar-css"></span>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
           </button>
-          <div id="navbar-menu-css" aria-labelledby="navbar-toggle-css">
-            <ul class="navbar-links-css">
-              <li class="navbar-item-css">
-                <a class="navbar-link-css" href="#">
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link ms-lg-5 FontStyle1NavItem" href="#">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -73,8 +69,8 @@
                   email@site.com</a
                 >
               </li>
-              <li class="navbar-item-css">
-                <a class="navbar-link-css" href="#">
+              <li class="nav-item">
+                <a class="nav-link FontStyle1NavItem" href="#">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -91,8 +87,8 @@
                   +(123) 456-7890</a
                 >
               </li>
-              <li class="navbar-item-css">
-                <a class="navbar-link-css" href="#">
+              <li class="nav-item">
+                <a class="nav-link FontStyle1NavItem" href="#">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -110,8 +106,8 @@
               </li>
             </ul>
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
     </section>
 
     <section class="pb-5">
@@ -883,7 +879,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script src="./navbar.js"></script>
     <script src="./ScrollToTopBtn.js"></script>
   </body>
 </html>
